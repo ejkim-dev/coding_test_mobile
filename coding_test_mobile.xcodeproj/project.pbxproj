@@ -16,6 +16,7 @@
 		62EB50252B16AE0800368AC1 /* coding_test_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB50242B16AE0800368AC1 /* coding_test_mobileTests.swift */; };
 		62EB502F2B16AE0800368AC1 /* coding_test_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB502E2B16AE0800368AC1 /* coding_test_mobileUITests.swift */; };
 		62EB50312B16AE0800368AC1 /* coding_test_mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB50302B16AE0800368AC1 /* coding_test_mobileUITestsLaunchTests.swift */; };
+		62EB503E2B171A2400368AC1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB503D2B171A2400368AC1 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		62EB502A2B16AE0800368AC1 /* coding_test_mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coding_test_mobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EB502E2B16AE0800368AC1 /* coding_test_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coding_test_mobileUITests.swift; sourceTree = "<group>"; };
 		62EB50302B16AE0800368AC1 /* coding_test_mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coding_test_mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62EB503D2B171A2400368AC1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				62EB50162B16AE0800368AC1 /* Assets.xcassets */,
 				62EB50182B16AE0800368AC1 /* LaunchScreen.storyboard */,
 				62EB501B2B16AE0800368AC1 /* Info.plist */,
+				62EB503D2B171A2400368AC1 /* Currency.swift */,
 			);
 			path = coding_test_mobile;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				62EB50122B16AE0600368AC1 /* ViewController.swift in Sources */,
 				62EB500E2B16AE0600368AC1 /* AppDelegate.swift in Sources */,
+				62EB503E2B171A2400368AC1 /* Currency.swift in Sources */,
 				62EB50102B16AE0600368AC1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
