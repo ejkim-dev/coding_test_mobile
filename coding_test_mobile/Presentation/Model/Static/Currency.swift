@@ -8,10 +8,25 @@
 import Foundation
 
 enum Currency: String, CaseIterable {
-    case krw = "한국(KRW)"
-    case jpy = "일본(JPY)"
-    case php = "필리핀(PHP)"
+    case krw = "KRW"
+    case jpy = "JPY"
+    case php = "PHP"
+    
+    private var name: String {
+        switch self {
+        case .krw: 
+            return "krw".localized
+        case .jpy:
+            return "jpy".localized
+        case .php:
+            return "php".localized
+        }
+    }
 
+    static var nameValues: [String] {
+        return Currency.allCases.map { "\($0.name)(\($0.rawValue))" }
+    }
+    
     static var values: [String] {
         return Currency.allCases.map { "\($0.rawValue)" }
     }

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  coding_test_mobile
+
+  Created by eunjin kim on 12/1/23.
+  
+*/
+"infomation" = "수취금액은 %@ 입니다.";
+
+"krw" = "한국";
+"jpy" = "일본";
+"php" = "필리핀";
+
+"exchange_rate" = "%@ / USD";

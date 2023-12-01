@@ -193,6 +193,10 @@
                     </view>
                     <connections>
                         <outlet property="editTransmissionAmount" destination="Zqb-py-2O0" id="mGF-un-lXr"/>
+                        <outlet property="labelCurrency" destination="ASZ-Pt-GoT" id="Xu7-Zy-Ytu"/>
+                        <outlet property="labelCurrentTime" destination="BE6-yb-YYf" id="3o0-QG-oyI"/>
+                        <outlet property="labelExchangeRate" destination="mbj-B1-UpH" id="02D-Oj-3dc"/>
+                        <outlet property="labelInfomation" destination="RsZ-XQ-LTb" id="Sf7-ja-bft"/>
                         <outlet property="pickerCurrency" destination="AfE-Q0-fnS" id="eug-n1-9p6"/>
                     </connections>
                 </viewController>
