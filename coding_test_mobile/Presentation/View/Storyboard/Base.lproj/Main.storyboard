@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfE-Q0-fnS">
-                                <rect key="frame" x="36.666666666666657" y="572" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="572" width="393" height="216"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2pR-kh-cJf">
                                 <rect key="frame" x="20" y="190" width="153" height="30"/>
@@ -170,9 +171,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fRf-Ew-vVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Sz-Vp-Cks"/>
+                            <constraint firstItem="AfE-Q0-fnS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3yG-Xc-Tvi"/>
                             <constraint firstItem="fRf-Ew-vVP" firstAttribute="top" secondItem="ZEP-CV-oDS" secondAttribute="bottom" id="6dM-vW-3op"/>
                             <constraint firstItem="mT3-CQ-QcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9VY-qZ-Q12"/>
-                            <constraint firstItem="AfE-Q0-fnS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHN-Tk-LF7"/>
+                            <constraint firstItem="AfE-Q0-fnS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CHN-Tk-LF7"/>
                             <constraint firstItem="ZEP-CV-oDS" firstAttribute="top" secondItem="DfY-yP-6VW" secondAttribute="bottom" id="Idr-Ny-f2a"/>
                             <constraint firstItem="Dy2-jj-lOV" firstAttribute="top" secondItem="2pR-kh-cJf" secondAttribute="bottom" id="JTH-As-jVY"/>
                             <constraint firstItem="DfY-yP-6VW" firstAttribute="top" secondItem="Dy2-jj-lOV" secondAttribute="bottom" id="Jkt-tP-AnM"/>
@@ -182,10 +184,10 @@
                             <constraint firstItem="2pR-kh-cJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="X8s-39-f16"/>
                             <constraint firstItem="mT3-CQ-QcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xc9-BC-oun"/>
                             <constraint firstItem="2pR-kh-cJf" firstAttribute="top" secondItem="mT3-CQ-QcF" secondAttribute="bottom" constant="25" id="YWr-jf-joo"/>
-                            <constraint firstItem="mT3-CQ-QcF" firstAttribute="centerX" secondItem="AfE-Q0-fnS" secondAttribute="centerX" id="YqZ-An-a1g"/>
                             <constraint firstItem="DfY-yP-6VW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f2f-bm-Ztk"/>
                             <constraint firstItem="RsZ-XQ-LTb" firstAttribute="top" secondItem="fRf-Ew-vVP" secondAttribute="bottom" constant="60" id="gCw-cm-UZ3"/>
                             <constraint firstItem="Dy2-jj-lOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lIu-6d-dOT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AfE-Q0-fnS" secondAttribute="trailing" id="mGx-g6-qf7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AfE-Q0-fnS" secondAttribute="bottom" constant="30" id="qrR-PJ-KRI"/>
                         </constraints>
                     </view>

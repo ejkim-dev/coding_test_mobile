@@ -78,6 +78,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6216CA1F2B198FAC007532BC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6216CA252B1991D2007532BC /* Model */,
+				6216CA232B199112007532BC /* ViewModel */,
+				6216CA222B1990FF007532BC /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6216CA202B1990AC007532BC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6216CA212B1990D2007532BC /* Di */,
+				62EB500D2B16AE0600368AC1 /* AppDelegate.swift */,
+				62EB500F2B16AE0600368AC1 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6216CA212B1990D2007532BC /* Di */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		6216CA222B1990FF007532BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6216CA242B199119007532BC /* Storyboard */,
+				62EB50112B16AE0600368AC1 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6216CA232B199112007532BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6216CA242B199119007532BC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				62EB50182B16AE0800368AC1 /* LaunchScreen.storyboard */,
+				62EB50132B16AE0600368AC1 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6216CA252B1991D2007532BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6216CA262B19924A007532BC /* Static */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6216CA262B19924A007532BC /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				62EB503D2B171A2400368AC1 /* Currency.swift */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		62EB50012B16AE0600368AC1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +169,10 @@
 		62EB500C2B16AE0600368AC1 /* coding_test_mobile */ = {
 			isa = PBXGroup;
 			children = (
-				62EB500D2B16AE0600368AC1 /* AppDelegate.swift */,
-				62EB500F2B16AE0600368AC1 /* SceneDelegate.swift */,
-				62EB50112B16AE0600368AC1 /* ViewController.swift */,
-				62EB50132B16AE0600368AC1 /* Main.storyboard */,
+				6216CA202B1990AC007532BC /* Application */,
+				6216CA1F2B198FAC007532BC /* Presentation */,
 				62EB50162B16AE0800368AC1 /* Assets.xcassets */,
-				62EB50182B16AE0800368AC1 /* LaunchScreen.storyboard */,
 				62EB501B2B16AE0800368AC1 /* Info.plist */,
-				62EB503D2B171A2400368AC1 /* Currency.swift */,
 			);
 			path = coding_test_mobile;
 			sourceTree = "<group>";
