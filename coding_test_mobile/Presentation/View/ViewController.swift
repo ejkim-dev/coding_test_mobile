@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     private let currencyNames: [String] = Currency.nameValues
     private let currencies: [String] = Currency.values
+    private let viewModel = MainViewModel()
     
 
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         
         self.labelCurrency.text = "\(currencyNames[0])"
         self.labelExchangeRate.text = String(format: "exchange_rate".localized, "0 \(currencies[0])")
+        self.labelInfomation.text = "infomation_default".localized
     }
     
     private func setSelectedPickerViewStyle() {
