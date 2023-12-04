@@ -18,27 +18,53 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     private let currencyNames: [String] = Currency.nameValues
     private let currencies: [String] = Currency.values
-    private let viewModel = MainViewModel()
+    private var viewModel: MainViewModel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initializeUi()
+        initializeData()
+        initializeUi()
+        subscribeViewModel()
     }
     
     override func viewWillLayoutSubviews() {
         self.setSelectedPickerViewStyle()
         self.setUITextFieldStyle()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.editTransmissionAmount.delegate = nil
+        self.pickerCurrency.delegate = nil
+        self.pickerCurrency.dataSource = nil
+    }
 
+    @objc func doneButtonTapped() {
+        viewModel.fetchLive()
+        view.endEditing(true)
+    }
+    
     private func initializeUi() {
         self.editTransmissionAmount.delegate = self
         self.pickerCurrency.delegate = self
         self.pickerCurrency.dataSource = self
         
         self.labelCurrency.text = "\(currencyNames[0])"
-        self.labelExchangeRate.text = String(format: "exchange_rate".localized, "0 \(currencies[0])")
         self.labelInfomation.text = "infomation_default".localized
+        self.labelCurrentTime.text = viewModel.timestemp
+    }
+    
+    private func subscribeViewModel() {
+        viewModel.onCompleted = { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.labelCurrentTime.text = self?.viewModel.timestemp
+                
+                guard let currency = self?.viewModel.currentCurrency else { return }
+                let exchangeRate = self?.viewModel.getExchangeRate(currency: currency) ?? 0
+            
+                self?.labelExchangeRate.text = String(format: "exchange_rate".localized, "\(NumberFormatUtil.convertNumberToFormatText(number: exchangeRate)) \(currency)")
+                self?.labelInfomation.text = self?.viewModel.getLabelInfomation(recievedAmount: self?.editTransmissionAmount.text)
+            }
+        }
     }
     
     private func setSelectedPickerViewStyle() {
@@ -74,9 +100,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         self.editTransmissionAmount.rightView = paddingView
         self.editTransmissionAmount.rightViewMode = .always
     }
-
-    @objc func doneButtonTapped() {
-        view.endEditing(true)
+    
+    private func initializeData() {
+        viewModel = AppDIContainer.shared.resolveService(MainViewModel.self)
+        viewModel.fetchLive()
     }
 }
 
@@ -97,8 +124,13 @@ extension ViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let seletedCurrency: String = currencyNames[row]
         
-        self.labelCurrency.text = "\(seletedCurrency)"
-        self.labelExchangeRate.text = String(format: "exchange_rate".localized, "0 \(currencies[row])")
+        labelCurrency.text = "\(seletedCurrency)"
+        viewModel.changeCurrency(currency: currencies[row])
         
+        let exchangeRate = viewModel.getExchangeRate(currency: currencies[row]) ?? 0
+        
+        labelExchangeRate.text = String(format: "exchange_rate".localized, "\(NumberFormatUtil.convertNumberToFormatText(number: exchangeRate)) \(currencies[row])")
+        
+        labelInfomation.text = viewModel.getLabelInfomation(recievedAmount: editTransmissionAmount.text)
     }
 }

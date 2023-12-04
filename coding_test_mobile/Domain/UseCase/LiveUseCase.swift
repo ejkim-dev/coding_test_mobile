@@ -10,5 +10,5 @@ import Foundation
 protocol LiveUseCase {
     typealias CompletionHandler = (Result<Live, ErrorResult>) -> Void
     
-    func fetchLive(accessKey: String, completion: @escaping CompletionHandler)
+    func fetchLive(completion: @escaping CompletionHandler)
 }

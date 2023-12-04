@@ -14,3 +14,10 @@ struct Live: Decodable {
     let source: String
     let quotes: [String: Double]
 }
+
+extension Live {
+    public func getExchangeRate(currency: String) -> Double? {
+        let currentKey = "USD\(currency)"
+        return self.quotes[currentKey]
+    }
+}

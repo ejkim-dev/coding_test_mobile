@@ -9,12 +9,14 @@ import Foundation
 
 class LiveUseCaseImpl: LiveUseCase {
     private let liveRepository: LiveRepository
+    private lazy var appConfiguration = AppConfiguration()
+    
     init(liveRepository: LiveRepository) {
         self.liveRepository = liveRepository
     }
     
-    func fetchLive(accessKey: String, completion: @escaping CompletionHandler) {
-        liveRepository.fetchLive(accessKey: accessKey) { result in
+    func fetchLive(completion: @escaping CompletionHandler) {
+        liveRepository.fetchLive(accessKey: appConfiguration.apiKey) { result in
             completion(result)
         }
     }

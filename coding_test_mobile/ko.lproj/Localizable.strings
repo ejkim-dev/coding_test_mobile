@@ -7,6 +7,7 @@
 */
 "infomation" = "수취금액은 %@ 입니다.";
 "infomation_default" = "송금액을 입력해주세요.";
+"infomation_error" = "송금액이 바르지 않습니다.";
 
 "krw" = "한국";
 "jpy" = "일본";

@@ -19,10 +19,13 @@
 		620C28662B1D97E100C5488B /* LiveRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C28652B1D97E100C5488B /* LiveRepositoryImpl.swift */; };
 		620C286C2B1DC6F100C5488B /* LiveUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C286B2B1DC6F100C5488B /* LiveUseCase.swift */; };
 		620C286E2B1DC73100C5488B /* LiveUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C286D2B1DC73100C5488B /* LiveUseCaseImpl.swift */; };
+		620C28762B1E0B7100C5488B /* NumberFormatUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C28752B1E0B7100C5488B /* NumberFormatUtil.swift */; };
+		620C28782B1E2BD300C5488B /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C28772B1E2BD300C5488B /* AppDIContainer.swift */; };
 		6216CA282B199FB1007532BC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216CA272B199FB1007532BC /* MainViewModel.swift */; };
 		6216CA302B19A75C007532BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6216CA322B19A75C007532BC /* Localizable.strings */; };
 		6216CA382B19B4F7007532BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216CA372B19B4F7007532BC /* Extensions.swift */; };
 		6216CA402B19DA50007532BC /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216CA3F2B19DA50007532BC /* Live.swift */; };
+		62A9C30B2B1E3C6D00DD3846 /* DateFormatUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9C30A2B1E3C6D00DD3846 /* DateFormatUtil.swift */; };
 		62EB500E2B16AE0600368AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB500D2B16AE0600368AC1 /* AppDelegate.swift */; };
 		62EB50122B16AE0600368AC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB50112B16AE0600368AC1 /* ViewController.swift */; };
 		62EB50152B16AE0600368AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EB50132B16AE0600368AC1 /* Main.storyboard */; };
@@ -64,6 +67,8 @@
 		620C28652B1D97E100C5488B /* LiveRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRepositoryImpl.swift; sourceTree = "<group>"; };
 		620C286B2B1DC6F100C5488B /* LiveUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveUseCase.swift; sourceTree = "<group>"; };
 		620C286D2B1DC73100C5488B /* LiveUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveUseCaseImpl.swift; sourceTree = "<group>"; };
+		620C28752B1E0B7100C5488B /* NumberFormatUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatUtil.swift; sourceTree = "<group>"; };
+		620C28772B1E2BD300C5488B /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		6216CA272B199FB1007532BC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6216CA332B19A7A4007532BC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6216CA342B19A7F9007532BC /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,7 +76,9 @@
 		6216CA372B19B4F7007532BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6216CA392B19BE6C007532BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6216CA3A2B19BE94007532BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6216CA3B2B19C146007532BC /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		6216CA3F2B19DA50007532BC /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		62A9C30A2B1E3C6D00DD3846 /* DateFormatUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatUtil.swift; sourceTree = "<group>"; };
 		62EB500A2B16AE0600368AC1 /* coding_test_mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coding_test_mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EB500D2B16AE0600368AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62EB50112B16AE0600368AC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,9 +184,19 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		620C28712B1DDA3D00C5488B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				620C28752B1E0B7100C5488B /* NumberFormatUtil.swift */,
+				62A9C30A2B1E3C6D00DD3846 /* DateFormatUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		6216CA1F2B198FAC007532BC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				620C28712B1DDA3D00C5488B /* Util */,
 				6216CA362B19B449007532BC /* Extension */,
 				6216CA252B1991D2007532BC /* Model */,
 				6216CA232B199112007532BC /* ViewModel */,
@@ -193,6 +210,7 @@
 			children = (
 				62EB500D2B16AE0600368AC1 /* AppDelegate.swift */,
 				620C284C2B1C856900C5488B /* AppConfiguration.swift */,
+				620C28772B1E2BD300C5488B /* AppDIContainer.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -281,6 +299,7 @@
 		62EB50012B16AE0600368AC1 = {
 			isa = PBXGroup;
 			children = (
+				6216CA3B2B19C146007532BC /* Secrets.xcconfig */,
 				62EB500C2B16AE0600368AC1 /* coding_test_mobile */,
 				62EB50232B16AE0800368AC1 /* coding_test_mobileTests */,
 				62EB502D2B16AE0800368AC1 /* coding_test_mobileUITests */,
@@ -470,12 +489,15 @@
 				620C28582B1CE10700C5488B /* ErrorResponse.swift in Sources */,
 				620C28662B1D97E100C5488B /* LiveRepositoryImpl.swift in Sources */,
 				620C286C2B1DC6F100C5488B /* LiveUseCase.swift in Sources */,
+				620C28762B1E0B7100C5488B /* NumberFormatUtil.swift in Sources */,
 				62EB50122B16AE0600368AC1 /* ViewController.swift in Sources */,
 				620C285E2B1D864F00C5488B /* DataConvertor.swift in Sources */,
 				620C28602B1D8DEA00C5488B /* ErrorResultEntity.swift in Sources */,
 				6216CA402B19DA50007532BC /* Live.swift in Sources */,
+				620C28782B1E2BD300C5488B /* AppDIContainer.swift in Sources */,
 				6216CA382B19B4F7007532BC /* Extensions.swift in Sources */,
 				620C284D2B1C856900C5488B /* AppConfiguration.swift in Sources */,
+				62A9C30B2B1E3C6D00DD3846 /* DateFormatUtil.swift in Sources */,
 				620C28562B1CB52100C5488B /* NetworkSessionManager.swift in Sources */,
 				620C284B2B1C811600C5488B /* HttpService.swift in Sources */,
 				62EB500E2B16AE0600368AC1 /* AppDelegate.swift in Sources */,
@@ -663,6 +685,7 @@
 		};
 		62EB50352B16AE0800368AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6216CA3B2B19C146007532BC /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -697,6 +720,7 @@
 		};
 		62EB50362B16AE0800368AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6216CA3B2B19C146007532BC /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
