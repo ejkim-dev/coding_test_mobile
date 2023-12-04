@@ -12,4 +12,14 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
 
+    var removeQuotes: String {
+        var newValue = self
+        if newValue.hasPrefix("\"") {
+            newValue.removeFirst()
+        }
+        if newValue.hasSuffix("\"") {
+            newValue.removeLast()
+        }
+        return newValue
+    }
 }
