@@ -27,9 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         subscribeViewModel()
     }
     
-    override func viewWillLayoutSubviews() {
-        self.setSelectedPickerViewStyle()
-        self.setUITextFieldStyle()
+    override func viewDidAppear(_ animated: Bool) {
+        // self.pickerCurrency.subviews 가 생성된 이후에 호출
+        setSelectedPickerViewStyle()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,6 +51,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         self.labelCurrency.text = "\(currencyNames[0])"
         self.labelInfomation.text = "infomation_default".localized
         self.labelCurrentTime.text = viewModel.timestemp
+        
+        self.setUITextFieldStyle()
     }
     
     private func subscribeViewModel() {
@@ -68,7 +70,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     }
     
     private func setSelectedPickerViewStyle() {
-        let selectiedView = self.pickerCurrency.subviews[1]
+        let selectiedView = self.pickerCurrency.subviews[1] // subviews[1] : 선택된 뷰
         selectiedView.backgroundColor = .clear
         
         let topLine = UIView(frame: CGRect(x: 0, y: 0, width: selectiedView.frame.width, height: 0.8))
